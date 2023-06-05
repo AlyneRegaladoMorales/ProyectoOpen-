@@ -25,7 +25,8 @@ import { RouterModule } from '@angular/router';
 import {MatRadioModule} from '@angular/material/radio';
 import { FormsModule } from '@angular/forms';
 import {MatCardModule} from "@angular/material/card";
-
+import { PagEmprendedorComponent } from './components/emprendedor/pag-emprendedor/pag-emprendedor.component';
+import { PagClienteComponent } from './components/cliente/pag-cliente/pag-cliente.component';
 
 
 
@@ -36,7 +37,10 @@ import {MatCardModule} from "@angular/material/card";
     AppComponent,
     IniciarSesionComponent,
     RegistrarUsuarioComponent,
-    CambiarContraseniaComponent
+    CambiarContraseniaComponent,
+    PagEmprendedorComponent,
+    PagClienteComponent,
+    
   ],
   imports: [
     BrowserModule,

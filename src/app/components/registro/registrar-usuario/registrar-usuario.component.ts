@@ -6,6 +6,7 @@ import { Gestor } from 'src/app/models/gestor';
 import { Usuario } from 'src/app/models/usuario';
 import { getSupportedInputTypes } from '@angular/cdk/platform';
 import { Emprendimiento } from 'src/app/models/emprendimiento';
+import { of, switchMap } from 'rxjs';
 @Component({
   selector: 'app-registrar-usuario',
   templateUrl: './registrar-usuario.component.html',
@@ -56,33 +57,40 @@ constructor(
       this.gestor.id_usuario = this.usuario.id;
 
     if (this.usuario.rol === 'Emprendedor') {
-        this.emprendimiento.nombre_Empresa = this.form_registro.value.nombre_Empresa;
+      this.emprendimiento.nombre_Empresa = this.form_registro.value.nombre_Empresa;
       this.emprendimiento.descripcion = this.form_registro.value.descripcion;
       this.emprendimiento.rubro = this.form_registro.value.rubro;
-      this.emprendimiento.id_usuario != this.usuario.id;
+      this.emprendimiento.id_usuario = this.usuario.id;
+
       }
       
 
   }
 
   registrarUsuario() {      
-    this.asignaciones();
+      this.asignaciones();
 
-    if (this.form_registro.valid) {
-          this.servicio.agregar_usuario(this.usuario).subscribe(result => {
-          console.log('Usuario registrado con exito');
-        }),
-          this.servicio.agregar_gestor(this.gestor).subscribe(result => {
-            console.log('Agregado al gestor')
-        })
-  
-        
-        
-        if (this.usuario.rol == 'Emprendedor') {
-          this.servicio.agregar_emprendimiento(this.emprendimiento).subscribe(result => {
-            console.log("Se agregó emprendimiento");
-           })
-        }
+          if (this.form_registro.valid) {
+        this.servicio.agregar_usuario(this.usuario).pipe(
+          switchMap(usuarioAgregado => {
+            this.gestor.id_usuario = usuarioAgregado.id;
+            this.emprendimiento.id_usuario = usuarioAgregado.id; // Movido aquí
+            return this.servicio.agregar_gestor(this.gestor);
+          }),
+          switchMap(() => {
+            if (this.usuario.rol === 'Emprendedor') {
+              return this.servicio.agregar_emprendimiento(this.emprendimiento); // No es necesario asignar la ID aquí
+            } else {
+              return of(null);
+            }
+          })
+        ).subscribe(result => {
+          console.log('Usuario registrado con éxito');
+          console.log('Agregado al gestor');
+          if (this.usuario.rol === 'Emprendedor') {
+            console.log('Se agregó emprendimiento');
+          }
+        });
       }
   }
 }

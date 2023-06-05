@@ -17,12 +17,64 @@
     "name": "typicode"
   },
   "usuario": [
-
+    {
+      "nombre": "Xiomara",
+      "apellido": "Cerna",
+      "celular": "909878763",
+      "email": "xiomara@gmial.com",
+      "rol": "Cliente",
+      "id": 1
+    },
+    {
+      "nombre": "Marcos",
+      "apellido": "Maldonado",
+      "celular": "909878763",
+      "email": "marcos@gmial.com",
+      "rol": "Emprendedor",
+      "id": 2
+    },
+    {
+      "nombre": "Ernesto",
+      "apellido": "Huaman",
+      "celular": "090987676",
+      "email": "enesto@gmail",
+      "rol": "Emprendedor",
+      "id": 3
+    }
   ],
   "gestor": [
-    
+    {
+      "id": 1,
+      "username": "xiomara1234",
+      "password": "123456",
+      "id_usuario": 1
+    },
+    {
+      "id": 2,
+      "username": "marcos",
+      "password": "123456",
+      "id_usuario": 2
+    },
+    {
+      "id": 3,
+      "username": "ernesto12345",
+      "password": "12345",
+      "id_usuario": 3
+    }
   ],
   "emprendimiento": [
-    
+    {
+      "nombre_Empresa": "MarcosStore",
+      "descripcion": "Venta de electrodomesticos",
+      "rubro": "Comercial",
+      "id": 1
+    },
+    {
+      "nombre_Empresa": "Ernesto Tiendas",
+      "descripcion": "Venta al por mayor de tiendas",
+      "rubro": "Textil",
+      "id_usuario": 3,
+      "id": 2
+    }
   ]
 }
