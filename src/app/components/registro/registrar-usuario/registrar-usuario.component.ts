@@ -35,15 +35,15 @@ constructor(
     username: this.builder.control('', Validators.required),
     password: this.builder.control('', Validators.required),
 
-    nombre_Empresa: this.builder.control('', Validators.required),
+    nombre_Empresa: [''],
     descripcion: [''],
     rubro: [''],
     
   })
 }
-
-    registrarUsuario() {      
-      //entidad usuario
+  
+  asignaciones() {
+          //entidad usuario
       this.usuario.nombre = this.form_registro.value.nombre;
       this.usuario.apellido = this.form_registro.value.apellido;
       this.usuario.celular = this.form_registro.value.celular;
@@ -55,21 +55,33 @@ constructor(
       this.gestor.password = this.form_registro.value.password;
       this.gestor.id_usuario = this.usuario.id;
 
-      this.emprendimiento.nombre_Empresa = this.form_registro.value.nombre_Empresa;
+    if (this.usuario.rol === 'Emprendedor') {
+        this.emprendimiento.nombre_Empresa = this.form_registro.value.nombre_Empresa;
       this.emprendimiento.descripcion = this.form_registro.value.descripcion;
       this.emprendimiento.rubro = this.form_registro.value.rubro;
-      this.emprendimiento.id_usuario = this.usuario.id;
+      this.emprendimiento.id_usuario != this.usuario.id;
+      }
+      
 
-      if (this.form_registro.valid) {
-        this.servicio.agregar_usuario(this.usuario).subscribe(result => {
+  }
+
+  registrarUsuario() {      
+    this.asignaciones();
+
+    if (this.form_registro.valid) {
+          this.servicio.agregar_usuario(this.usuario).subscribe(result => {
           console.log('Usuario registrado con exito');
         }),
           this.servicio.agregar_gestor(this.gestor).subscribe(result => {
             console.log('Agregado al gestor')
         })
+  
+        
         
         if (this.usuario.rol == 'Emprendedor') {
-          
+          this.servicio.agregar_emprendimiento(this.emprendimiento).subscribe(result => {
+            console.log("Se agregó emprendimiento");
+           })
         }
       }
   }

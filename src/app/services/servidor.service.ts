@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class ServidorService {
   private usuarioUrl = 'http://localhost:3000/usuario'
   private gestorUrl = 'http://localhost:3000/gestor'
-  private emprendimeito=
+  private emprendimientoUrl='http://localhost:3000/emprendimiento'
 
   constructor(private http:HttpClient) { }
 
@@ -17,6 +17,9 @@ export class ServidorService {
   }
   agregar_gestor(data: any): Observable<any>{
     return this.http.post(this.gestorUrl,data);
+  }
+  agregar_emprendimiento(data: any): Observable<any>{
+    return this.http.post(this.emprendimientoUrl,data);
   }
 
 

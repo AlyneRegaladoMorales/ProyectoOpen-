@@ -1,52 +1,47 @@
-body{
-background-color: #edf4fe;
 
-}
+
 .linea-horizontal {
   border-top: 1.5px solid black;
 }
+
 main {
-  
-  height: 100%;
-  width: 100%;
-  font-family: "Roboto";
+
+  padding: 5%;
   display: flex;
   justify-content: center;
-  align-items: center;
+ background-color: #edf4fe;
+  align-items: flex-start;
 }
 
-.form{
- 
-    flex-direction: column;
-}
-.datosP{
-    display: flex;
-    gap: 0.4rem;
-    
-}
-.datEmpresa{
-    display: flex;
-    flex-direction: column;
-}
-.radioBNut{
-    display: flex;
-    justify-content: center;
-}
-.registrar{   
-
-    display: flex;
-    justify-content: center;
-
- 
-   
+.form {
+  flex-direction: column;
+  
 }
 
+.datosP {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.datEmpresa {
+  display: flex;
+  flex-direction: column;
+}
+
+.radioBNut {
+  display: flex;
+  justify-content: center;
+}
+
+.registrar {
+  display: flex;
+  justify-content: center;
+}
 
 .box_registro {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-   
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 25rem;
   height: auto;
   background-color: #ffffff;
@@ -60,19 +55,20 @@ main {
   padding: 3rem 3rem;
 }
 
-.titulo{
-    margin-bottom:1rem ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.titulo {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.titulo img{
-width: 5rem;
-}
-.titulo label{
-    font-size: 3.5rem;
-    font-weight: 400;
-    letter-spacing: -0.04em;
-    color: #153F65;
 
+.titulo img {
+  width: 5rem;
+}
+
+.titulo label {
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  color: #153f65;
 }
