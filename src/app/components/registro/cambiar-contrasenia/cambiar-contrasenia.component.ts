@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./cambiar-contrasenia.component.css']
 })
 export class CambiarContraseniaComponent {
-
+correoCorrecto = true;
 }
