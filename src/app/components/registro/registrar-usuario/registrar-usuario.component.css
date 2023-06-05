@@ -2,6 +2,9 @@ body{
 background-color: #edf4fe;
 
 }
+.linea-horizontal {
+  border-top: 1.5px solid black;
+}
 main {
   
   height: 100%;

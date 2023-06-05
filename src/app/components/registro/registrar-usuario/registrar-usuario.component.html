@@ -8,7 +8,7 @@
             </div>
 
             <div  class="form">
-                <form [formGroup] = "usuario" (ngSubmit)="registrarUsuario()" >
+                <form [formGroup] = "form_registro" (ngSubmit)="registrarUsuario()" >
                     <div class="datosP">
                         <mat-form-field class="example-full-width">
                             <mat-label>Nombre</mat-label>
@@ -38,11 +38,29 @@
                             <mat-radio-button value="Emprendedor">Emprendedor</mat-radio-button>
                         </mat-radio-group>
                     </div>
+                    <div class="datEmpresa" *ngIf="form_registro.controls['rol'].value ==='Emprendedor' ">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Nombre de la Empresa </mat-label>
+                            <input  matInput formControlName="nombre_Empresa">
+                        </mat-form-field>
 
-                    <div class="datEmpresa">
+                        <mat-form-field class="example-full-width" >
+                            <mat-label>Descripcion</mat-label>
+                            <input type="text" matInput formControlName="descripcion">
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Rubro</mat-label>
+                            <input type="text" matInput formControlName="rubro">
+                        </mat-form-field>
+                    </div>
+
+                    <p class="linea-horizontal">
+
+
+                    <div class="datEmpresa" >
                         <mat-form-field class="example-full-width">
                             <mat-label>Usuario</mat-label>
-                            <input  matInput formControlName="id">
+                            <input  matInput formControlName="username">
                         </mat-form-field>
 
                         <mat-form-field class="example-full-width">
