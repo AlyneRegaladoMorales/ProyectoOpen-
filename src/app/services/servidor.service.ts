@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Usuario } from '../models/usuario';
+import { Gestor } from '../models/gestor';
 
 @Injectable({
   providedIn: 'root'
@@ -22,5 +24,14 @@ export class ServidorService {
     return this.http.post(this.emprendimientoUrl,data);
   }
 
+  getUsuario(id: number): Observable<any> {
+    return this.http.get<Usuario>(`${this.usuarioUrl}/${id}`);
+  }
+
+  get_gestor(username: string): Observable<any> {
+    return this.http.get<Gestor>(`${this.gestorUrl}?username=${username}`);
+  }
 
 }
+
+
