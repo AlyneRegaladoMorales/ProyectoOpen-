@@ -1,6 +1,7 @@
 export class Gestor {
-  id: number = 0;
+  id!: number ;
   username!: string;
   password!: string;
-  id_usuario!: number; 
+  rol!: string;
+  value: any;
 }

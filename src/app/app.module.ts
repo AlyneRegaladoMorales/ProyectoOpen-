@@ -9,7 +9,6 @@ import { RegistrarUsuarioComponent } from './components/registro/registrar-usuar
 import { CambiarContraseniaComponent } from './components/registro/cambiar-contrasenia/cambiar-contrasenia.component';
 
 
-
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import{MatButtonModule} from '@angular/material/button';

@@ -1,8 +1,8 @@
-export class Usuario {
+export class Emprendedor{
+    id!: number;
   nombre!: string;
   apellido!: string;
   celular!: string;
   email!: string;
-  rol!: string;
-  id!: number;
+  id_gestor!:number
 }

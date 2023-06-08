@@ -14,12 +14,12 @@
         </div>
 
       
-            <form [formGroup]="loginForm" (ngSubmit)="verificarlogin()">          
+            <form [formGroup]="loginForm" (ngSubmit)="verificarLogin()">          
 
                 <div class="datEmpresa">
                     <mat-form-field class="example-full-width">
                         <mat-label>Usuario</mat-label>
-                        <input type="email" matInput formControlName ="id">
+                        <input type="email" matInput formControlName ="username">
                     </mat-form-field>
 
                     <mat-form-field class="example-full-width">

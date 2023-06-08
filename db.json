@@ -16,65 +16,92 @@
   "profile": {
     "name": "typicode"
   },
-  "usuario": [
+  "cliente": [
     {
-      "nombre": "Xiomara",
-      "apellido": "Cerna",
-      "celular": "909878763",
-      "email": "xiomara@gmial.com",
-      "rol": "Cliente",
+      "nombre": "Alyne ",
+      "apellido": "Morales",
+      "celular": "989876765",
+      "email": "alyne@gmail",
+      "id_gestor": 0,
       "id": 1
     },
     {
-      "nombre": "Marcos",
-      "apellido": "Maldonado",
-      "celular": "909878763",
-      "email": "marcos@gmial.com",
-      "rol": "Emprendedor",
+      "nombre": "Maria",
+      "apellido": "Mendoza",
+      "celular": "090987",
+      "email": "maria@mendoza",
       "id": 2
     },
     {
-      "nombre": "Ernesto",
-      "apellido": "Huaman",
-      "celular": "090987676",
-      "email": "enesto@gmail",
-      "rol": "Emprendedor",
+      "nombre": "fdhdf",
+      "apellido": "fghdfg",
+      "celular": "fghdfg",
+      "email": "fghdfg@fdgjhdfgh",
+      "id_gestor": 5,
       "id": 3
+    },
+    {
+      "nombre": "nuevo ",
+      "apellido": "cliente",
+      "celular": "adfasf",
+      "email": "sdfsa@sfdgbsd",
+      "id_gestor": 6,
+      "id": 4
     }
   ],
   "gestor": [
     {
       "id": 1,
-      "username": "xiomara1234",
-      "password": "123456",
-      "id_usuario": 1
+      "username": "alyne1234",
+      "password": "1234",
+      "rol": "1234"
     },
     {
       "id": 2,
-      "username": "marcos",
-      "password": "123456",
-      "id_usuario": 2
+      "username": "alyne123",
+      "password": "1234",
+      "rol": "Cliente"
     },
     {
-      "id": 3,
-      "username": "ernesto12345",
+      "username": "maria1233",
       "password": "12345",
-      "id_usuario": 3
+      "rol": "Cliente",
+      "id": 3
+    },
+    {
+      "username": "juan1234",
+      "password": "1234",
+      "rol": "Emprendedor",
+      "id": 4
+    },
+    {
+      "username": "fghdfg",
+      "password": "fghdfg",
+      "rol": "Cliente",
+      "id": 5
+    },
+    {
+      "username": "1",
+      "password": "1",
+      "rol": "Cliente",
+      "id": 6
+    }
+  ],
+  "emprendedor": [
+    {
+      "nombre": "Juan",
+      "apellido": "Mertinez",
+      "celular": "98789876",
+      "email": "1212@asdfasd",
+      "id": 1
     }
   ],
   "emprendimiento": [
     {
-      "nombre_Empresa": "MarcosStore",
-      "descripcion": "Venta de electrodomesticos",
-      "rubro": "Comercial",
-      "id": 1
-    },
-    {
-      "nombre_Empresa": "Ernesto Tiendas",
-      "descripcion": "Venta al por mayor de tiendas",
+      "nombre_Empresa": "Juan Store",
+      "descripcion": "Tienda de juguetes",
       "rubro": "Textil",
-      "id_usuario": 3,
-      "id": 2
+      "id": 1
     }
   ]
 }
